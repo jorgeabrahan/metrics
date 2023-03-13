@@ -48,3 +48,22 @@ h6 {
 button {
   cursor: pointer;
 }
+
+button span {
+  pointer-events: none;
+}
+
+button:has(span) {
+  display: flex;
+  align-items: center;
+}
+
+button.reset {
+  background: none;
+  border: none;
+}
+
+.center {
+  max-width: 1024px;
+  padding-inline: 0.8rem;
+}
