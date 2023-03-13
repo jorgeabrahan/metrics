@@ -25,7 +25,7 @@
 
 # 📖 Metrics <a name="about-project"></a>
 
-**Metrics** a dynamic SPA website, using ES6 syntax, modules, React, Redux, React-Router, Async Thunks and a Financial modeling API. 
+**Metrics** a dynamic SPA website, using ES6 syntax, modules, React, Redux, React-Router, Async Thunks and an Air Pollution API.
 
 ## 🛠 Built With <a name="built-with"></a>
 
