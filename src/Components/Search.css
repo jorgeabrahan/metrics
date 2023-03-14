@@ -7,7 +7,8 @@
   padding-inline: 0.5rem;
 }
 
-.search__input, .search__submit {
+.search__input,
+.search__submit {
   padding: 0.4rem;
 }
 
