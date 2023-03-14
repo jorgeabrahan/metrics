@@ -1,27 +1,81 @@
-body {
-  margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+
+  --french-rose: #ec4c8a;
+  --strawberry: #fd5294;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Lato', sans-serif;
+  background-color: var(--strawberry);
+  color: white;
+}
+
+html {
+  scroll-padding-top: 90px;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+button {
+  cursor: pointer;
+}
+
+button span {
+  pointer-events: none;
+}
+
+button:has(span) {
+  display: flex;
+  align-items: center;
+}
+
+a:has(span) {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+button.reset {
+  background: none;
+  border: none;
+}
+
+.center {
+  max-width: 1024px;
+  padding-inline: 0.8rem;
+  margin-inline: auto;
 }
