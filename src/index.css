@@ -76,4 +76,5 @@ button.reset {
 .center {
   max-width: 1024px;
   padding-inline: 0.8rem;
+  margin-inline: auto;
 }
