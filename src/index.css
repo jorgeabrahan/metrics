@@ -1,9 +1,3 @@
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  font-family: 'Lato', sans-serif;
-}
-
 *,
 *::before,
 *::after {
@@ -13,6 +7,16 @@ body {
 * {
   margin: 0;
   padding: 0;
+  --french-rose: #ec4c8a;
+  --strawberry: #fd5294;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Lato', sans-serif;
+  background-color: var(--strawberry);
+  color: white;
 }
 
 html {
@@ -56,6 +60,12 @@ button span {
 button:has(span) {
   display: flex;
   align-items: center;
+}
+
+a:has(span) {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 button.reset {
