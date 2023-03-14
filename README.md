@@ -25,7 +25,7 @@
 
 # 📖 Metrics <a name="about-project"></a>
 
-**Metrics** a dynamic SPA website, using ES6 syntax, modules, React, Redux, React-Router, Async Thunks and an Air Pollution API.
+**Metrics** a dynamic SPA website, using ES6 syntax, modules, React, Redux, React-Router, Async Thunks, and a Currencies Rates API.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -159,7 +159,7 @@ If you like this project you can just cheer me up with a comment 🙂!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Air pollution API used for this project: [https://openweathermap.org/api/air-pollution](https://openweathermap.org/api/air-pollution)
+Currencies API used for this project: [https://github.com/fawazahmed0/currency-api#readme](https://github.com/fawazahmed0/currency-api#readme)
 
 Design guidelines for this project : [https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 

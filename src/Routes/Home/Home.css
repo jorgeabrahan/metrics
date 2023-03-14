@@ -1,0 +1,71 @@
+.currencies__header {
+  background-image: url('../../currency.svg');
+  background-repeat: no-repeat;
+  background-size: 220px;
+  background-position: 0.5rem center;
+  height: 25vh;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.currencies__header h2 {
+  text-align: right;
+  font-weight: 800;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  text-transform: uppercase;
+}
+
+.currencies__header small {
+  display: block;
+  text-align: right;
+}
+
+.currencies__title {
+  background-color: var(--ruber);
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
+}
+
+.currencies a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+}
+
+.currency small {
+  display: block;
+}
+
+.currencies a:nth-child(even) {
+  background-color: var(--ruber);
+}
+
+.currencies a:nth-child(odd) {
+  background-color: var(--dark-pink);
+}
+
+.currency__title {
+  line-height: 1.5rem;
+}
+
+.currency__icon {
+  display: flex;
+  width: max-content;
+  padding: 0.1rem;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.currency__icon span {
+  font-size: 1rem;
+}

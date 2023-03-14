@@ -9,7 +9,7 @@ const capitalize = (word) => (
 
 function Navbar() {
   const { pathname } = useLocation();
-  const { country } = useParams();
+  const { currency } = useParams();
 
   const isShowingDetails = pathname.split('/')[1] === 'details';
 
@@ -21,13 +21,14 @@ function Navbar() {
             <span className="material-symbols-outlined">
               arrow_back_ios
             </span>
-            <span>{capitalize(country)}</span>
           </NavLink>
         )}
-        <h1 className="nav__title">Air Pollution</h1>
+        <h1 className="nav__title">
+          {isShowingDetails ? capitalize(currency) : 'Currencies'}
+        </h1>
         <button className="reset" type="button">
           <span className="material-symbols-outlined">
-            filter_list
+            search
           </span>
         </button>
       </nav>
