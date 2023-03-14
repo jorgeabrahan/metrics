@@ -3,10 +3,8 @@
   background-repeat: no-repeat;
   background-size: 220px;
   background-position: 0.5rem center;
-
   height: 25vh;
   padding: 0.5rem;
-  
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -51,6 +49,7 @@
 .currencies a:nth-child(even) {
   background-color: var(--ruber);
 }
+
 .currencies a:nth-child(odd) {
   background-color: var(--dark-pink);
 }
