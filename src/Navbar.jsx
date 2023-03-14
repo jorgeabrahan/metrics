@@ -1,17 +1,29 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import {
   NavLink, Outlet, useLocation, useParams,
 } from 'react-router-dom';
 import './Navbar.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import Search from './Components/Search';
+import { toggleSearch } from './redux/Search/searchSlice';
 
 const capitalize = (word) => (
   `${word[0].toUpperCase()}${word.slice(1, word.length)}`
 );
 
 function Navbar() {
+  const dispatch = useDispatch();
   const { pathname } = useLocation();
   const { currency } = useParams();
+  const { isSearching } = useSelector((store) => store.search);
 
-  const isShowingDetails = pathname.split('/')[1] === 'details';
+  useEffect(() => {
+    if (!isSearching) return;
+    dispatch(toggleSearch());
+  }, [pathname]);
+
+  const isShowingDetails = pathname.includes('details');
 
   return (
     <>
@@ -26,13 +38,13 @@ function Navbar() {
         <h1 className="nav__title">
           {isShowingDetails ? capitalize(currency) : 'Currencies'}
         </h1>
-        <button className="reset" type="button">
+        <button className="reset" type="button" onClick={() => dispatch(toggleSearch())}>
           <span className="material-symbols-outlined">
-            search
+            {isSearching ? 'search_off' : 'search'}
           </span>
         </button>
       </nav>
-
+      {isSearching && <Search />}
       <Outlet />
     </>
   );

@@ -1,0 +1,34 @@
+.search {
+  position: fixed;
+  top: 3.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-inline: 0.5rem;
+}
+
+.search__input,
+.search__submit {
+  padding: 0.4rem;
+}
+
+.search__input {
+  padding-inline: 1rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: var(--ruber);
+  color: white;
+}
+
+.search__submit {
+  border: none;
+  outline: none;
+  background: none;
+  background-color: #280d17;
+}
+
+.search__submit span {
+  font-size: 1.8rem;
+  color: white;
+}

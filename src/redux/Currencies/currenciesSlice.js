@@ -8,6 +8,7 @@ const BASE_URL = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@${API_VER
 
 const initialState = {
   currencies: [],
+  filteredCurrencies: [],
   status: 'idle',
   error: '',
 };
@@ -35,19 +36,28 @@ export const fetchCurrencies = createAsyncThunk('country/get', () => (
 const currenciesSlice = createSlice({
   name: 'countries',
   initialState,
-  reducers: {},
+  reducers: {
+    searchForCurrency: (state, { payload }) => {
+      const filteredCurrencies = state.currencies.filter(({ short, name }) => (
+        short.includes(payload) || name.toLowerCase().includes(payload)
+      ));
+      return { ...state, filteredCurrencies };
+    },
+  },
   extraReducers(builder) {
     builder
       .addCase(fetchCurrencies.pending, (state) => ({
         ...state, status: 'loading',
       }))
       .addCase(fetchCurrencies.fulfilled, (state, { payload }) => ({
-        ...state, currencies: payload, status: 'fulfilled',
+        ...state, currencies: payload, filteredCurrencies: payload, status: 'fulfilled',
       }))
       .addCase(fetchCurrencies.rejected, (state, { error }) => ({
         ...state, status: 'rejected', error: error.message,
       }));
   },
 });
+
+export const { searchForCurrency } = currenciesSlice.actions;
 
 export default currenciesSlice.reducer;
