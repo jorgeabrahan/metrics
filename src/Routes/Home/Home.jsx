@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuid } from 'uuid';
 import { fetchCurrencies, searchForCurrency } from '../../redux/Currencies/currenciesSlice';
@@ -33,7 +33,12 @@ const Home = () => {
     dispatch(setQuery(''));
   }, [dispatch, isSearching]);
 
+  const filteredCurrenciesList = useMemo(() => (
+    createList(filteredCurrencies)
+  ), [filteredCurrencies]);
+
   let render = <p>Loading...</p>;
+  if (status === 'fulfilled') render = filteredCurrenciesList;
   if (status === 'rejected') {
     render = (
       <p>
@@ -41,9 +46,6 @@ const Home = () => {
         {error}
       </p>
     );
-  }
-  if (status === 'fulfilled') {
-    render = createList(filteredCurrencies);
   }
 
   return (
