@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   isSearching: false,
+  query: '',
 };
 
 const searchSlice = createSlice({
@@ -12,9 +13,12 @@ const searchSlice = createSlice({
     toggleSearch: (state) => ({
       ...state, isSearching: !state.isSearching,
     }),
+    setQuery: (state, { payload }) => ({
+      ...state, query: payload,
+    }),
   },
 });
 
-export const { toggleSearch } = searchSlice.actions;
+export const { toggleSearch, setQuery } = searchSlice.actions;
 
 export default searchSlice.reducer;

@@ -6,6 +6,7 @@
   padding-block: 0.5rem;
   position: sticky;
   top: 0;
+  padding-inline: 0.5rem;
 }
 
 .nav * {
@@ -15,4 +16,6 @@
 .nav__title {
   flex: 1;
   text-align: center;
+  font-size: 1.4rem;
+  font-weight: 300;
 }

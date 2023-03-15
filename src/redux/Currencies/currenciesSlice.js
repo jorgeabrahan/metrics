@@ -13,7 +13,7 @@ const initialState = {
   error: '',
 };
 
-export const fetchCurrencies = createAsyncThunk('country/get', () => (
+export const fetchCurrencies = createAsyncThunk('currencies/get', () => (
   new Promise((resolve, reject) => {
     axios.get(`${BASE_URL}/currencies.min.json`)
       .then(({ data }) => {

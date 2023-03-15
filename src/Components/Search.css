@@ -19,13 +19,15 @@
   outline: none;
   background-color: var(--ruber);
   color: white;
+  border-radius: 5px 0 0 5px;
 }
 
 .search__submit {
   border: none;
   outline: none;
   background: none;
-  background-color: #280d17;
+  background-color: #6a0b2e;
+  border-radius: 0 5px 5px 0;
 }
 
 .search__submit span {

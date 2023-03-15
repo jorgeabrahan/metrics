@@ -76,8 +76,37 @@ button.reset {
   border: none;
 }
 
-.center {
-  max-width: 1024px;
-  padding-inline: 0.8rem;
-  margin-inline: auto;
+.header {
+  background-image: url('./currency.svg');
+  background-repeat: no-repeat;
+  background-size: 220px;
+  background-position: 0.5rem center;
+  height: 25vh;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.header h2 {
+  text-align: right;
+  font-weight: 800;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  text-transform: uppercase;
+}
+
+.header small {
+  display: block;
+  text-align: right;
+}
+
+.subtitle-separator {
+  background-color: var(--ruber);
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
 }
