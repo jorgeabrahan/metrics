@@ -66,7 +66,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Not deployed yet
+- [https://metrics-4byw.onrender.com/](https://metrics-4byw.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
