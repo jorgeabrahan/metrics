@@ -76,12 +76,6 @@ button.reset {
   border: none;
 }
 
-.center {
-  max-width: 1024px;
-  padding-inline: 0.8rem;
-  margin-inline: auto;
-}
-
 .header {
   background-image: url('./currency.svg');
   background-repeat: no-repeat;
