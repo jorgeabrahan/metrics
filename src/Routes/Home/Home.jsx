@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuid } from 'uuid';
 import { fetchCurrencies, searchForCurrency } from '../../redux/Currencies/currenciesSlice';
+import { setQuery } from '../../redux/Search/searchSlice';
 import Currency from './Currency';
 import './Home.css';
 
@@ -29,6 +30,7 @@ const Home = () => {
   useEffect(() => {
     if (isSearching) return;
     dispatch(searchForCurrency(''));
+    dispatch(setQuery(''));
   }, [dispatch, isSearching]);
 
   let render = <p>Loading...</p>;
@@ -46,7 +48,7 @@ const Home = () => {
 
   return (
     <section>
-      <div className="currencies__header">
+      <div className="header">
         <h2>
           Currency
           <br />
@@ -54,7 +56,7 @@ const Home = () => {
         </h2>
         <small>Includes cryptocurrencies</small>
       </div>
-      <small className="currencies__title">List of available currencies</small>
+      <small className="subtitle-separator">List of available currencies</small>
       <div className="currencies">
         {render}
       </div>
