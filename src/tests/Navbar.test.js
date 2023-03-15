@@ -10,6 +10,10 @@ describe('Tests for <Navbar /> component', () => {
     expect(screen.getByText('Currencies')).not.toBeNull();
   });
 
+  it('Shouldn\'t render the search bar by default', () => {
+    expect(() => screen.getByRole('searchbox')).toThrow();
+  });
+
   it('Should match snapshot', () => {
     expect(renderer.create(wrapRouter()).toJSON()).toMatchSnapshot();
   });
