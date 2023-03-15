@@ -96,6 +96,7 @@ const Details = () => {
                 type="text"
                 value={amount}
                 onChange={({ target }) => dispatch(setAmount(target.value))}
+                onBlur={({ target }) => Number(target.value) === 0 && dispatch(setAmount(1))}
               />
               <h2>
                 {' '}
