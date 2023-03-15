@@ -1,24 +1,32 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { useEffect, useRef, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useEffect, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { searchForCurrency } from '../redux/Currencies/currenciesSlice';
+import { searchForConversion } from '../redux/Details/detailsSlice';
+import { setQuery } from '../redux/Search/searchSlice';
 import './Search.css';
 
 const Search = () => {
   const dispatch = useDispatch();
   const searchInput = useRef();
   const { pathname } = useLocation();
-  const [query, setQuery] = useState('');
+  const { query } = useSelector((store) => store.search);
 
   useEffect(() => {
     searchInput.current.focus();
+    return () => {
+      dispatch(setQuery(''));
+    };
   }, []);
 
   const onSubmit = (e) => {
     e.preventDefault();
     searchInput.current.focus();
-    if (!pathname.includes('home')) return;
+    if (!pathname.includes('home')) {
+      dispatch(searchForConversion(query.toLowerCase()));
+      return;
+    }
     dispatch(searchForCurrency(query.toLowerCase()));
   };
 
@@ -30,7 +38,7 @@ const Search = () => {
         type="search"
         placeholder="Search for a currency..."
         value={query}
-        onChange={({ target }) => setQuery(target.value)}
+        onChange={({ target }) => dispatch(setQuery(target.value))}
       />
       <button className="search__submit" type="submit">
         <span className="material-symbols-outlined">
