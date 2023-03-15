@@ -8,10 +8,6 @@ import { useEffect } from 'react';
 import Search from './Components/Search';
 import { toggleSearch } from './redux/Search/searchSlice';
 
-const capitalize = (word) => (
-  `${word[0].toUpperCase()}${word.slice(1, word.length)}`
-);
-
 function Navbar() {
   const dispatch = useDispatch();
   const { pathname } = useLocation();
@@ -36,7 +32,7 @@ function Navbar() {
           </NavLink>
         )}
         <h1 className="nav__title">
-          {isShowingDetails ? capitalize(currency) : 'Currencies'}
+          {isShowingDetails ? `Currency / ${currency.toUpperCase()}` : 'Currencies'}
         </h1>
         <button className="reset" type="button" onClick={() => dispatch(toggleSearch())}>
           <span className="material-symbols-outlined">
