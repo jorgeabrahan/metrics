@@ -23,7 +23,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="nav center">
+      <nav className="nav">
         {isShowingDetails && (
           <NavLink to="/home" className="reset">
             <span className="material-symbols-outlined">
