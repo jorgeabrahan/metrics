@@ -28,7 +28,8 @@
   align-items: center;
 }
 
-.amount, .amount__submit {
+.amount,
+.amount__submit {
   padding: 0.3rem;
 }
 
