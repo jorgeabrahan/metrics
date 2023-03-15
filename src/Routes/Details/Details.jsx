@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { useParams } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuid } from 'uuid';
 import {
@@ -69,6 +69,17 @@ const Details = () => {
     );
   }
 
+  const filteredConversionsList = useMemo(() => (
+    filteredConversions.map(({ name, value }, index, arr) => (
+      <Conversion
+        key={uuid()}
+        name={name}
+        value={Number(value)}
+        isDarker={isDarker(index, index === (arr.length - 1))}
+      />
+    ))
+  ), [filteredConversions]);
+
   return (
     <div>
       {status === 'fulfilled' ? (
@@ -97,14 +108,7 @@ const Details = () => {
           </div>
           <small className="subtitle-separator">List of conversions</small>
           <div className="conversions">
-            {filteredConversions.map(({ name, value }, index) => (
-              <Conversion
-                key={uuid()}
-                name={name}
-                value={Number(value)}
-                isDarker={isDarker(index)}
-              />
-            ))}
+            {filteredConversionsList}
           </div>
         </>
       ) : render}
