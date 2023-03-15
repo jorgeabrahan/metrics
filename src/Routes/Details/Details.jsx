@@ -48,7 +48,7 @@ const Details = () => {
     // se verifica que sea positivo
     if (num < 1) return;
 
-    dispatch(searchForConversion(query));
+    dispatch(searchForConversion(query.toLowerCase()));
   };
 
   useEffect(() => {
