@@ -29,7 +29,7 @@ export const fetchCurrency = createAsyncThunk('currency/get', (currency) => (
             Object.entries(value).forEach(([currency, equivalent]) => {
               details.conversions.push({
                 name: currency,
-                value: equivalent,
+                value: Number.parseFloat(equivalent).toFixed(2),
               });
             });
           }

@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for <Navbar /> component Should match snapshot 1`] = `
+Array [
+  <nav
+    className="nav"
+  >
+    <h1
+      className="nav__title"
+    >
+      Currencies
+    </h1>
+    <button
+      className="reset"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="material-symbols-outlined"
+      >
+        search
+      </span>
+    </button>
+  </nav>,
+  <section>
+    <div
+      className="header"
+    >
+      <h2>
+        Currency
+        <br />
+        Rates
+      </h2>
+      <small>
+        Includes cryptocurrencies
+      </small>
+    </div>
+    <small
+      className="subtitle-separator"
+    >
+      List of available currencies
+    </small>
+    <div
+      className="currencies"
+    >
+      <p>
+        Loading...
+      </p>
+    </div>
+  </section>,
+]
+`;

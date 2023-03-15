@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 
 const Conversion = ({ name, value, isDarker }) => (
-  <div className={`conversion ${isDarker ? '' : 'conversion--ruber'}`}>
+  <div className={`conversion ${isDarker ? 'conversion--ruber' : ''}`}>
     <h3 className="conversion__name">{name}</h3>
     <p className="conversion__value">{value}</p>
   </div>
