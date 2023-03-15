@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for <Home /> component Should match the snapshot 1`] = `
+<section>
+  <div
+    className="header"
+  >
+    <h2>
+      Currency
+      <br />
+      Rates
+    </h2>
+    <small>
+      Includes cryptocurrencies
+    </small>
+  </div>
+  <small
+    className="subtitle-separator"
+  >
+    List of available currencies
+  </small>
+  <div
+    className="currencies"
+  >
+    <a
+      className=""
+      href="/details/afn"
+      onClick={[Function]}
+    >
+      <div>
+        <h2
+          className="currency__title"
+        >
+          Afghan afghani
+        </h2>
+        <small>
+          afn
+        </small>
+      </div>
+      <div
+        className="currency__icon"
+      >
+        <span
+          className="material-symbols-outlined"
+        >
+          arrow_right_alt
+        </span>
+      </div>
+    </a>
+    <a
+      className=""
+      href="/details/algo"
+      onClick={[Function]}
+    >
+      <div>
+        <h2
+          className="currency__title"
+        >
+          Algorand
+        </h2>
+        <small>
+          algo
+        </small>
+      </div>
+      <div
+        className="currency__icon"
+      >
+        <span
+          className="material-symbols-outlined"
+        >
+          arrow_right_alt
+        </span>
+      </div>
+    </a>
+    <a
+      className=""
+      href="/details/all"
+      onClick={[Function]}
+    >
+      <div>
+        <h2
+          className="currency__title"
+        >
+          Albanian lek
+        </h2>
+        <small>
+          all
+        </small>
+      </div>
+      <div
+        className="currency__icon"
+      >
+        <span
+          className="material-symbols-outlined"
+        >
+          arrow_right_alt
+        </span>
+      </div>
+    </a>
+    <a
+      className=""
+      href="/details/amd"
+      onClick={[Function]}
+    >
+      <div>
+        <h2
+          className="currency__title"
+        >
+          Armenian dram
+        </h2>
+        <small>
+          amd
+        </small>
+      </div>
+      <div
+        className="currency__icon"
+      >
+        <span
+          className="material-symbols-outlined"
+        >
+          arrow_right_alt
+        </span>
+      </div>
+    </a>
+  </div>
+</section>
+`;
