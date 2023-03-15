@@ -1,0 +1,54 @@
+.conversions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.conversion {
+  background-color: var(--dark-pink);
+  padding: 1rem 0.5rem;
+}
+
+.conversion__name {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+}
+
+.conversion__value {
+  font-size: 1rem;
+}
+
+.conversion--ruber {
+  background-color: var(--ruber);
+}
+
+.amount-form {
+  display: flex;
+  align-items: center;
+}
+
+.amount, .amount__submit {
+  padding: 0.3rem;
+}
+
+.amount {
+  border: none;
+  outline: none;
+  background: none;
+  background-color: var(--ruber);
+  color: white;
+  width: 5rem;
+  text-align: center;
+  margin-right: 0.5rem;
+  border-radius: 0 5px 5px 0;
+}
+
+.amount__submit {
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  background-color: #6a0b2e;
+  border-radius: 5px 0 0 5px;
+}
