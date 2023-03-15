@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { useParams } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuid } from 'uuid';
 import {
@@ -10,18 +10,27 @@ import Conversion from './Conversion';
 import './Details.css';
 import { setQuery } from '../../redux/Search/searchSlice';
 
+/* code to determine if the Conversion element is darker according to the pattern */
 const pattern = [false, true];
 
-const isDarker = (index) => {
+const resetPattern = () => {
+  pattern[0] = false;
+  pattern[1] = true;
+};
+
+const isDarker = (index, isLast) => {
   if (index < pattern.length) return pattern[index];
   const [first, last] = pattern;
   if (first === last) {
     pattern[1] = !last;
+    if (isLast) resetPattern();
     return !last;
   }
   pattern[0] = !first;
+  if (isLast) resetPattern();
   return last;
 };
+/* ------------------------------------------------------------------------------ */
 
 const Details = () => {
   const dispatch = useDispatch();
@@ -69,6 +78,17 @@ const Details = () => {
     );
   }
 
+  const filteredConversionsList = useMemo(() => (
+    filteredConversions.map(({ name, value }, index, arr) => (
+      <Conversion
+        key={uuid()}
+        name={name}
+        value={Number(value)}
+        isDarker={isDarker(index, index === (arr.length - 1))}
+      />
+    ))
+  ), [filteredConversions]);
+
   return (
     <div>
       {status === 'fulfilled' ? (
@@ -85,6 +105,7 @@ const Details = () => {
                 type="text"
                 value={amount}
                 onChange={({ target }) => dispatch(setAmount(target.value))}
+                onBlur={({ target }) => Number(target.value) === 0 && dispatch(setAmount(1))}
               />
               <h2>
                 {' '}
@@ -97,14 +118,7 @@ const Details = () => {
           </div>
           <small className="subtitle-separator">List of conversions</small>
           <div className="conversions">
-            {filteredConversions.map(({ name, value }, index) => (
-              <Conversion
-                key={uuid()}
-                name={name}
-                value={Number(value)}
-                isDarker={isDarker(index)}
-              />
-            ))}
+            {filteredConversionsList}
           </div>
         </>
       ) : render}

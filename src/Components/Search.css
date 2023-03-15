@@ -1,5 +1,5 @@
 .search {
-  position: fixed;
+  position: sticky;
   top: 3.5rem;
   width: 100%;
   display: flex;
