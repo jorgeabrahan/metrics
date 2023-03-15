@@ -18,12 +18,12 @@ const Search = () => {
     return () => {
       dispatch(setQuery(''));
     };
-  }, []);
+  }, [dispatch]);
 
   const onSubmit = (e) => {
     e.preventDefault();
     searchInput.current.focus();
-    if (!pathname.includes('home')) {
+    if (pathname.includes('details')) {
       dispatch(searchForConversion(query.toLowerCase()));
       return;
     }
