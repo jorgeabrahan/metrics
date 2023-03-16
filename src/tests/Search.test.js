@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import Search from '../Components/Search';

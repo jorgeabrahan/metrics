@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { createMemoryHistory } from '@remix-run/router';
 import { Provider } from 'react-redux';
 import { Router, RouterProvider } from 'react-router-dom';
