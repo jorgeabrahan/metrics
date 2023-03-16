@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { useParams } from 'react-router-dom';
 import { useEffect, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
