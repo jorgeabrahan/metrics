@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import {
   NavLink, Outlet, useLocation, useParams,
 } from 'react-router-dom';

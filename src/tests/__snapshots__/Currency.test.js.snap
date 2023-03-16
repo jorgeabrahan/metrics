@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for <Currency /> component Should match the snapshot 1`] = `
+<a
+  className=""
+  href="/details/usd"
+  onClick={[Function]}
+>
+  <div>
+    <h2
+      className="currency__title"
+    >
+      United States Dollar
+    </h2>
+    <small>
+      usd
+    </small>
+  </div>
+  <div
+    className="currency__icon"
+  >
+    <span
+      className="material-symbols-outlined"
+    >
+      arrow_right_alt
+    </span>
+  </div>
+</a>
+`;
