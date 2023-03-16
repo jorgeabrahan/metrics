@@ -99,31 +99,38 @@ Once you've cloned the repository simply run:
 
 ```
 cd metrics
+npm i
 ```
 
-And this should open the directory with all the files from the repository on the command line, to open it in your explorer if you're using windows you can run:
+And if you want to analyze the code you can run:
 
 ```
-explorer .
+code .
 ```
+
+To open the project in VScode
 
 ### Usage
 
 To run the project, if you are on the metrics folder path on your terminal you can execute the following command:
 
 ```
-code .
+npm start
 ```
-
-This will open Visual Studio Code on the folder you're at.
 
 ### Run tests
 
-There are no tests configured for this project.
+To run tests:
+
+```
+npm test
+```
 
 ### Deployment
 
-You can deploy this project using GitHub pages by pushing changes to the main branch, of course you'll just be able to do this if you're added as a collaborator in this repository.
+```
+npm run build
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
